@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "trbrittneystudentdata",
+  "private_key_id": "bb3d38df148f579c03d1dd7ec56a989258bbaa56",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCdD6akOjf9hANF\nQuZIcMt/yKyckZL9J6UoxSrQnXYvbIU64S/r3ZQtr/84v5hNYaE9NUAgSLfiYzRA\nX1sT/kK5Y2TcUiJTS0wmNwlIKR6O3abp8Hx7qSN6lfn2oIEfSJnDzFUdQG12GtPh\nprZqTwAgqFIfpy2gH+QvVhuOXAhDMGFoAUni0mKTd79mMiE6lkV4ZA7+3vT7gERP\nz68Q+2gtv1CitMjFuS43TCmd01/tI8sTgss28ZIWaTKo2KWIhyjGyaCqOtKD1ARO\nu3sayB2gaytWJXS/Ry5Y4fL9BzBQiezrA3euhago+LUiK4QK3/CGXeUuX9ZYvX4R\nt65cQ/0XAgMBAAECggEACcnibGTWfX3fSE9Jk+U3waCLpXxrKUzxva9AIl1V8tG0\nIf3L40rdg9VutiY2w0fc6Tgq5XgywbDGHmbzAbV8ihpYPGUAD6nnNpCCixVI+sV0\ntCrRT1G0zNyRBh5tvbnkH3BaM6cCy3QTlYIy50BCNUbYS3G7ZbnnGk4nDIHO4AUI\nY6D2tdjq3abUct1kjMdTRto4Sa4jm8fML9zI0Zk8d2z/P87d6itLRs4kSHQ5/tHl\ny3Bsr2mymwq2mMeWCzHVjCO341NYmtIRi2NreqZIQYf4xxXL7+F7659B2oo9kjvS\nlsMMlh1RaicTv7uozmGiAIMxfdKxGC/QhxuPHdyRdQKBgQDOolJO+Ohka5y0gCNu\nDejwuCKQq1Bqcxq9P8UqDdTdVA64PzMI+47KancQ6CJhUziSScVK8wMN/hs594W3\nqHKFIWo668zz97UioagNssQ4piAm9UvcJetTSm2NrdiuRJ6aI3JMu5xtdTLswaSW\nn0i4/S1j3aiFAPoCmW00NyTxhQKBgQDClXatBPNhfiXvHvolxExOIKbU62TX8VJx\n3j8v9+WTHQmVjJVqXDAAtASRausZLEYgSr63JfrcrCMfrXU5WdYa03RETbEX+ruc\nfAi/2inBs+zLtzZ7AT/KEIsN+6j4SVEmzpwFLSSc6tV9PY9CyErSfj2CmWCcV5zU\nQVmZbN+o6wKBgD02DJfkWENXNYaq5tP1PuoAQg0FEr9V9bfWKjv4+PPPsMSXxDCH\nBJelzjut6HFYS8vaGp3HO0Jr4fjcADqVpccWTPfDXmVvHbNym+vi5wm4/JFN3PkM\nKpfz1lxAAY4uOaWDlppwgThTnZBRFMahzNMv/MA2q3MrBOS8OoNbSpBZAoGAWVki\nNk5Yp0KyjntN57ucQh+yG4C/PHz+G3Uu1Iri6sthlD8KeN092YTPuCo9K8DtrnRD\n4HtbFqsgMbKHaj87FfRUpex6zgT+0tsNdXLqy5wftmc5Z//p15IDF/ef3epkjgo/\nEA1ri3Y1c52pw8OOv9rhya898mw0gi5DwzR/+uMCgYEAlBX/hEVvE/ZRXdzPqW2F\nqohYn7Lt8qWhX4OPI6eiGM0QodogPjJIsC10PI1eP6hlR4pPg8czuu3QoPN+QzMJ\n8qrSOtdwP0jKUEEukjFusPzpOFhkraI9wCzypY+DAxCO4wqJaOygtoEbXYu761/G\nEfQIbb2mLL2li//rVX/pNWo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "nared-538@trbrittneystudentdata.iam.gserviceaccount.com",
+  "client_id": "116058977423534662422",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nared-538%40trbrittneystudentdata.iam.gserviceaccount.com"
+}
