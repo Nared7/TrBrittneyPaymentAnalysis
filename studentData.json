@@ -167,28 +167,6 @@
             "Total Cost (Without Book Fee)": ""
         }
     ], 
-    "One to one": [
-        {
-            "4 Skill Class Fee (Monthly)": "MMK 120,000", 
-            "4Skill Discount (%)": "0%", 
-            "Book Fee (One School Year)": "MMK 0", 
-            "Myanmar Name": "Thin Thazin", 
-            "Net Fee (4 Skill)": "MMK  120,000", 
-            "No.": 1, 
-            "Total Cost": "", 
-            "Total Cost (Without Book Fee)": "MMK  120,000"
-        }, 
-        {
-            "4 Skill Class Fee (Monthly)": "MMK 150,000", 
-            "4Skill Discount (%)": "0%", 
-            "Book Fee (One School Year)": "MMK 0", 
-            "Myanmar Name": "Su Su Kyaw", 
-            "Net Fee (4 Skill)": "MMK 150,000", 
-            "No.": 2, 
-            "Total Cost": "MMK 150,000", 
-            "Total Cost (Without Book Fee)": "MMK 150,000"
-        }
-    ], 
     "One-on-One": [
         {
             "4 Skill Class Fee (Monthly)": "MMK 120,000", 
