@@ -10,140 +10,38 @@ from string import capwords
 
 Name = st.text_input('Which student are you looking for?')
 
-# wb = openpyxl.load_workbook(r'D:\Python_Projects\TrBrittneyInvoice\studentCost.xlsx', data_only=True)
-# janInvoiceWB = openpyxl.load_workbook(r'D:\Python_Projects\TrBrittneyInvoice\InvoiceList_Jan2023.xlsx')
+def getInvoiceList():
+    # Request All Google Sheet Data to save request limit
+    # From this nested dictionary, I will extract the data I need.
+    cred_file = r"trbrittneystudentdata-bb3d38df148f.json"
+    gc = gspread.service_account(filename=cred_file)
+    invoiceWS_List = [sh.title for sh in gc.openall()]
+    with open("invoiceList.json", "w") as write_file:
+        json.dump(invoiceWS_List, write_file, indent=4, separators=(", ", ": "), sort_keys=True)  # encode dict into JSON
 
-# Request All Google Sheet Data to save request limit
-# From this nested dictionary, I will extract the data I need.
-cred_file = r"trbrittneystudentdata-bb3d38df148f.json"
-gc = gspread.service_account(filename=cred_file)
-database = gc.open('studentData')
-invoiceData = gc.open('InvoiceList_March2023')
+info_data = st.empty()
+info_data.write('Load Data from local Database')
 
-# info_data = 'Load Data from local Database'
-info_data = st.info('Load Data from local Database')
+try:
+    with open('invoiceList.json') as json_file:
+        invoiceWS_List = json.load(json_file)
+except:
+    info_data.write("No Invoice List found. Press 'Fetch Invoice List' to update the database")
+    invoiceWS_List = []
+
+
+invoice_option = st.selectbox('Which month would you like to review?', invoiceWS_List)
+
 with open('studentData.json') as json_file:
     allStData = json.load(json_file)
 
-with open('invoiceData.json') as json_file:
-    invoice_data = json.load(json_file)
-
-
-# def findStudent(excelWB, studentName):
-#     ssDatabaseName = ''
-#     studentClassName = ''
-#     studentClass = ''
-#     studentSheetRow = ''
-#
-#     engClassPrice = ''
-#     engClassDiscount = ''
-#     engClassNetPrice = ''
-#
-#     grammarClassPrice = ''
-#     grammarClassDiscount = ''
-#     grammarClassNetPrice = ''
-#
-#     bookFee = ''
-#
-#     totalCost = ''
-#
-#     receiptNote = ''
-#
-#     firstPerson = 0
-#     stName = ''
-#
-#     for cnt, sheet in enumerate(wb.sheetnames):
-#         ws = excelWB[sheet]
-#         if firstPerson:
-#             firstPerson = 0
-#             break
-#         for row in range(2,13):
-#             stName = ws['B'+str(row)].value
-#
-#             try:
-#                 stName = stName.lower()
-#             except:
-#                 pass
-#
-#             if stName == studentName.lower():
-#                 ssDatabaseName = stName
-#                 studentClass = ws
-#                 studentClassName = sheet
-#                 if sheet == 'YL Starter' or sheet == 'PreYL' or sheet == 'Teen' or sheet == 'Upper Intermediate 1' or \
-#                     sheet == 'Intermediate 1' or sheet == 'Intermediate 2' or sheet == 'Pre-Intermediate 1' or sheet == 'Pre-Intermediate 2':
-#                     engClassPrice = str("{:,}".format(studentClass['C' + str(row)].value)) + ' kyats'
-#                     engClassDiscount = str((studentClass['D' + str(row)].value) * 100) + ' %'
-#                     engClassNetPrice = str("{:,}".format(studentClass['E' + str(row)].value)) + ' kyats'
-#
-#                     grammarClassPrice = '-'
-#                     grammarClassDiscount = '-'
-#                     grammarClassNetPrice = '-'
-#
-#                     bookPrice = studentClass['F' + str(row)].value
-#
-#                     if bookPrice is None:
-#                         bookFee = '-     '
-#                     else:
-#                         bookFee = str("{:,}".format(studentClass['F' + str(row)].value))  + ' kyats'
-#
-#                     totalCost = str("{:,}".format(studentClass['G' + str(row)].value)) + ' kyats'
-#                 else:
-#                     engClassPrice = str("{:,}".format(studentClass['C' + str(row)].value)) + ' kyats'
-#                     engClassDiscount = str((studentClass['D' + str(row)].value) * 100) + ' %'
-#                     engClassNetPrice = str("{:,}".format(studentClass['E' + str(row)].value)) + ' kyats'
-#
-#                     grammarClassPrice = str("{:,}".format(studentClass['F' + str(row)].value)) + ' kyats'
-#                     grammarClassDiscount = str((studentClass['G' + str(row)].value) * 100) + ' %'
-#                     grammarClassNetPrice = str("{:,}".format(studentClass['H' + str(row)].value)) + ' kyats'
-#
-#                     bookPrice = studentClass['I' + str(row)].value
-#
-#                     if bookPrice is None:
-#                         bookFee = '-     '
-#                     else:
-#                         bookFee = str("{:,}".format(studentClass['I' + str(row)].value)) + ' kyats'
-#
-#                     totalCost = str("{:,}".format(studentClass['J' + str(row)].value)) + ' kyats'
-#                 firstPerson = 1
-#                 break # To get first Daniel
-#     if studentClass == '':
-#         ssDatabaseName = 'No such student'
-#
-#     toReturnData = [ssDatabaseName, studentClassName, engClassPrice, engClassDiscount,engClassNetPrice,grammarClassPrice, grammarClassDiscount, grammarClassNetPrice, bookFee, totalCost]
-#     return toReturnData
-#
-#
-# def get_maximum_rows(*, sheet_object):
-#     rows = 0
-#     for max_row, row in enumerate(sheet_object, 1):
-#         if not all(col.value is None for col in row):
-#             rows += 1
-#     return rows
-#
-#
-# def findStudentInvoice(excelWB, studentName):
-#     stName = ''
-#     stClass = ''
-#     tranID = ''
-#     invoiceID = ''
-#     amount = ''
-#
-#     for cnt, sheet in enumerate(excelWB.sheetnames):
-#         ws = excelWB[sheet]
-#         maxRow = get_maximum_rows(sheet_object=ws)
-#         for row in range(2, maxRow+1):
-#             stName = ws['A' + str(row)].value
-#             try:
-#                 stName = stName.lower()
-#             except:
-#                 pass
-#             if stName.lower() == studentName.lower():
-#                 stClass = ws['B' + str(row)].value
-#                 tranID = ws['C' + str(row)].value
-#                 invoiceID = ws['D' + str(row)].value
-#                 amount = ws['E' + str(row)].value
-#     toReturnList = [studentName, stClass, tranID, invoiceID, amount]
-#     return toReturnList
+try:
+    with open(invoice_option + '.json') as json_file:
+        invoice_data = json.load(json_file)
+        info_data.write('Local Payment Data loaded from ' + invoice_option)
+except:
+    info_data.write("No such Invoice Data. Press Fetch to update the database")
+    invoice_data = {}
 
 db_studentName = []
 db_engClassPrice = []
@@ -170,8 +68,14 @@ stInvoiceData = []
 
 def fetchData():
     global allStData, invoice_data
+
+    cred_file = r"trbrittneystudentdata-bb3d38df148f.json"
+    gc = gspread.service_account(filename=cred_file)
+    database = gc.open('studentData')
+    invoiceWS = gc.open(invoice_option)
+
     ws_list = database.worksheets()
-    invoice_ws = invoiceData.worksheets()
+    invoice_ws = invoiceWS.worksheets()
 
     for sheet in ws_list:
         list_of_dicts = sheet.get_all_records()
@@ -195,10 +99,18 @@ def fetchData():
     with open("studentData.json", "w") as write_file:
         json.dump(allStData, write_file, indent=4, separators=(", ", ": "), sort_keys=True)  # encode dict into JSON
 
-    with open("invoiceData.json", "w") as write_file:
+    with open(invoice_option + ".json", "w") as write_file:
         json.dump(invoice_data, write_file, indent=4, separators=(", ", ": "), sort_keys=True)  # encode dict into JSON
 
+    with open('studentData.json') as json_file:
+        allStData = json.load(json_file)
 
+    with open(invoice_option + '.json') as json_file:
+        invoice_data = json.load(json_file)
+        info_data.write('Local Data loaded from ' + invoice_option)
+
+st.button('Fetch Data', on_click=fetchData)
+st.button('Fetch Invoice List', on_click=getInvoiceList)
 
 def searchName(name):
     global allStData, stData
@@ -273,7 +185,6 @@ def searchName(name):
             [in_stName[i], in_class[i], in_id[i], in_TranID[i], in_amount[i], in_note[i]]) # tuple = python data type, list & dictionary = python data type
 
 
-st.button('Fetch Data', on_click=fetchData)
 searchName(Name)
 # st.write(stData)
 # stData = [findStudent(wb, Name)]
