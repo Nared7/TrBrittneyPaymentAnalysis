@@ -1,0 +1,337 @@
+{
+    "Elementary 1": [
+        {
+            "Amount": "MMK 60,000", 
+            "Class": "Pre-Intermediate 2", 
+            "Invoice ID": 202302017, 
+            "Student Name": "Sabae", 
+            "Transaction ID": 100295506083947054
+        }, 
+        {
+            "Amount": "MMK 60,000", 
+            "Class": "elementary 1", 
+            "Invoice ID": 32, 
+            "Student Name": "Sai ko myat kyaw", 
+            "Transaction ID": 1002957090848719049
+        }
+    ], 
+    "Grammar 1": [
+        {
+            "Amount": "MMK 25,000", 
+            "Class": "Grammar 1", 
+            "Invoice ID": 202302019, 
+            "Student Name": "Saung Hatet Htar San", 
+            "Transaction ID": 1002957080846531098
+        }
+    ], 
+    "Intermediate 1": [
+        {
+            "Amount": "MMK 60,000", 
+            "Class": "Intermediate 1", 
+            "Invoice ID": 202302002, 
+            "Student Name": "Vivienne", 
+            "Transaction ID": 1002954030831287683
+        }, 
+        {
+            "Amount": "MMK 60,000", 
+            "Class": "Intermediate 1", 
+            "Invoice ID": 202302027, 
+            "Student Name": "Nandy Shoon Lae May", 
+            "Transaction ID": 1002958040853609244
+        }
+    ], 
+    "Intermediate 2": [], 
+    "Pre-Intermediate 1": [], 
+    "PreYL": [
+        {
+            "Amount": " MMK  30,000 ", 
+            "Class": "PreYL", 
+            "Invoice ID": 202302003, 
+            "Student Name": "July Grace", 
+            "Transaction ID": 1002955080836648928
+        }, 
+        {
+            "Amount": " MMK  28,500 ", 
+            "Class": "PreYL", 
+            "Invoice ID": 202302004, 
+            "Student Name": "Candy", 
+            "Transaction ID": 1002953000828855850
+        }, 
+        {
+            "Amount": " MMK  28,500 ", 
+            "Class": "PreYL", 
+            "Invoice ID": 13, 
+            "Student Name": "Daniel", 
+            "Transaction ID": 1002956030840879243
+        }, 
+        {
+            "Amount": " MMK  28,500 ", 
+            "Class": "PreYL", 
+            "Invoice ID": 202302022, 
+            "Student Name": "Glory", 
+            "Transaction ID": 1002955020839161542
+        }, 
+        {
+            "Amount": " MMK  27,000 ", 
+            "Class": "PreYL", 
+            "Invoice ID": 202302025, 
+            "Student Name": "Christ Tu Aung", 
+            "Transaction ID": 1002959020858016332
+        }
+    ], 
+    "Teen": [
+        {
+            "Amount": " MMK  35,000 ", 
+            "Class": "Teen", 
+            "Invoice ID": 202302001, 
+            "Student Name": "Luwis", 
+            "Transaction ID": 1002954010832310991
+        }, 
+        {
+            "Amount": " MMK  35,000 ", 
+            "Class": "Teen", 
+            "Invoice ID": 202302015, 
+            "Student Name": "Win Theingi Ko", 
+            "Transaction ID": 1002957090845112139
+        }, 
+        {
+            "Amount": " MMK  31,500 ", 
+            "Class": "Teen", 
+            "Invoice ID": 202302024, 
+            "Student Name": "Alicia", 
+            "Transaction ID": 1002959020858012342
+        }, 
+        {
+            "Amount": " MMK  35,000 ", 
+            "Class": "Teen", 
+            "Invoice ID": 202302029, 
+            "Student Name": "Nang Moon Aung", 
+            "Transaction ID": 1002958010853530841
+        }
+    ], 
+    "Upper Intermediate 1": [
+        {
+            "Amount": "MMK 0", 
+            "Class": "Upper Intermediate 1", 
+            "Invoice ID": "202302test", 
+            "Student Name": "Naing ye khant", 
+            "Transaction ID": "test"
+        }, 
+        {
+            "Amount": "MMK 0", 
+            "Class": "Upper Intermediate 1", 
+            "Invoice ID": "202302test", 
+            "Student Name": "Naing ye khant", 
+            "Transaction ID": "test"
+        }, 
+        {
+            "Amount": "MMK 0", 
+            "Class": "Upper Intermediate 1", 
+            "Invoice ID": "202302test", 
+            "Student Name": "Naing ye khant", 
+            "Transaction ID": "test"
+        }, 
+        {
+            "Amount": "MMK 0", 
+            "Class": "Upper Intermediate 1", 
+            "Invoice ID": 202302333, 
+            "Student Name": "Naing ye khant", 
+            "Transaction ID": 123456789000
+        }, 
+        {
+            "Amount": "MMK 40,000", 
+            "Class": "Upper Intermediate 1", 
+            "Invoice ID": 202303039, 
+            "Student Name": "Aubrey", 
+            "Transaction ID": 1002959050859500215
+        }
+    ], 
+    "YL Starter": [
+        {
+            "Amount": " MMK  25,000 ", 
+            "Class": "YL Starter", 
+            "Invoice ID": 202302000, 
+            "Student Name": "Patrick", 
+            "Transaction ID": 1002953020828516732
+        }, 
+        {
+            "Amount": " MMK  25,000 ", 
+            "Class": "YL Starter", 
+            "Invoice ID": 202302010, 
+            "Student Name": "Shin Thant Hmue", 
+            "Transaction ID": 1002953030826723053
+        }, 
+        {
+            "Amount": " MMK  25,000 ", 
+            "Class": "YL Starter", 
+            "Invoice ID": 202302016, 
+            "Student Name": "Zhao Kyi Yan", 
+            "Transaction ID": 1002957080845849038
+        }, 
+        {
+            "Amount": " MMK  25,000 ", 
+            "Class": "YL Starter", 
+            "Invoice ID": 202302031, 
+            "Student Name": "Hsu Myat Noe Wai", 
+            "Transaction ID": 1002958030853864563
+        }, 
+        {
+            "Amount": " MMK  25,000 ", 
+            "Class": "YL Starter", 
+            "Invoice ID": 202302034, 
+            "Student Name": "Larry", 
+            "Transaction ID": 1002955030839418223
+        }
+    ], 
+    "YL2": [
+        {
+            "Amount": " MMK  43,500 ", 
+            "Class": "YL2", 
+            "Invoice ID": 202302006, 
+            "Notes": "", 
+            "Student Name": "Harry", 
+            "Transaction ID": 1002953040827573554
+        }, 
+        {
+            "Amount": " MMK  45,000 ", 
+            "Class": "YL2", 
+            "Invoice ID": 202302011, 
+            "Notes": "", 
+            "Student Name": "Thoon Sint Han Kyaw", 
+            "Transaction ID": 1002953060823877766
+        }, 
+        {
+            "Amount": " MMK  45,000 ", 
+            "Class": "YL2", 
+            "Invoice ID": 202302012, 
+            "Notes": "", 
+            "Student Name": "Kelvin", 
+            "Transaction ID": 1002952000822636420
+        }
+    ], 
+    "YL3": [
+        {
+            "Amount": " MMK  45,000 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202302009, 
+            "Student Name": "Susan", 
+            "Transaction ID": 1002953030826723053
+        }, 
+        {
+            "Amount": " MMK  43,500 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202302020, 
+            "Student Name": "Khant Nyar Thaw", 
+            "Transaction ID": 1002961080868006578
+        }, 
+        {
+            "Amount": " MMK  28,500 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202302021, 
+            "Student Name": "Thurein Lin", 
+            "Transaction ID": 1002961080868006578
+        }, 
+        {
+            "Amount": " MMK  45,000 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202302028, 
+            "Student Name": "John", 
+            "Transaction ID": 1002958090851749059
+        }, 
+        {
+            "Amount": " MMK  45,000 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202302030, 
+            "Student Name": "Pinky", 
+            "Transaction ID": 1002958080853093788
+        }, 
+        {
+            "Amount": " MMK  43,500 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202302033, 
+            "Student Name": "Sophia", 
+            "Transaction ID": 1002957060847281366
+        }, 
+        {
+            "Amount": " MMK  42,000 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202303035, 
+            "Student Name": "Anna san", 
+            "Transaction ID": 1002956060844616786
+        }, 
+        {
+            "Amount": " MMK  42,000 ", 
+            "Class": "YL3", 
+            "Invoice ID": 202303038, 
+            "Student Name": "David", 
+            "Transaction ID": "01002956050844618825          01002959050859500215"
+        }
+    ], 
+    "YL5": [
+        {
+            "Amount": " MMK  48,250 ", 
+            "Class": "YL5", 
+            "Invoice ID": 202302014, 
+            "Student Name": "Jenny", 
+            "Transaction ID": 1002956030840879243
+        }, 
+        {
+            "Amount": " MMK  35,000 ", 
+            "Class": "YL5", 
+            "Invoice ID": 202302018, 
+            "Student Name": "Jeniffer", 
+            "Transaction ID": 1002957020846503242
+        }, 
+        {
+            "Amount": " MMK  48,250 ", 
+            "Class": "YL5", 
+            "Invoice ID": 202302023, 
+            "Student Name": "Blessing", 
+            "Transaction ID": 1002955020839161542
+        }, 
+        {
+            "Amount": " MMK  31,500 ", 
+            "Class": "YL5", 
+            "Invoice ID": 202303036, 
+            "Student Name": "Zen", 
+            "Transaction ID": 1002956060844616786
+        }, 
+        {
+            "Amount": " MMK  46,500 ", 
+            "Class": "YL5", 
+            "Invoice ID": 202303037, 
+            "Student Name": "Alice", 
+            "Transaction ID": 1002956050844618825
+        }
+    ], 
+    "YL6": [
+        {
+            "Amount": " MMK  48,250 ", 
+            "Class": "YL6", 
+            "Invoice ID": 202302005, 
+            "Student Name": "Ben", 
+            "Transaction ID": 1002953000828855850
+        }, 
+        {
+            "Amount": " MMK  48,250 ", 
+            "Class": "YL6", 
+            "Invoice ID": 202302007, 
+            "Student Name": "Henry", 
+            "Transaction ID": 1002953040827573554
+        }, 
+        {
+            "Amount": " MMK  35,000 ", 
+            "Class": "YL6", 
+            "Invoice ID": 202302008, 
+            "Student Name": "Aaron", 
+            "Transaction ID": 1002952080822505708
+        }, 
+        {
+            "Amount": " MMK  50,000 ", 
+            "Class": "YL6", 
+            "Invoice ID": 202302026, 
+            "Student Name": "Jayden", 
+            "Transaction ID": 1002959010857727341
+        }
+    ]
+}

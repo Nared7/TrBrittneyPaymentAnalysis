@@ -1,0 +1,71 @@
+{
+    "Elementary 1": [
+        {
+            "Amount": " MMK  60,000 ", 
+            "Class": "Elementary 1", 
+            "Invoice ID": 202304004, 
+            "Note": "", 
+            "Student Name": "Htet moe yan", 
+            "Transaction ID": 1003012081132615568
+        }
+    ], 
+    "Grammar 1": [], 
+    "Intermediate 1": [], 
+    "Intermediate 2": [], 
+    "Intermediate 3": [],
+    "One-on-One": [
+        {
+            "Amount": "MMK  120,000", 
+            "Class": "One-on-One", 
+            "Invoice ID": 202304005, 
+            "Note": "", 
+            "Student Name": "Thin thazin", 
+            "Transaction ID": 1003003061084613606
+        }
+    ], 
+    "Pre-Intermediate 1": [
+        {
+            "Amount": "MMK 60,000", 
+            "Class": "Pre-Intermediate 1", 
+            "Invoice ID": 202303002, 
+            "Note": "", 
+            "Student Name": "Yu thandar aung", 
+            "Transaction ID": 1003011021124233062
+        }
+    ], 
+    "Pre-Intermediate 2": [], 
+    "PreYL": [], 
+    "Teen": [
+        {
+            "Amount": " MMK  35,000 ", 
+            "Class": "Teen", 
+            "Invoice ID": 202303000, 
+            "Note": "", 
+            "Student Name": "Mary", 
+            "Transaction ID": 1003011031124775163
+        }, 
+        {
+            "Amount": " MMK  35,000 ", 
+            "Class": "Teen", 
+            "Invoice ID": 202304003, 
+            "Note": "", 
+            "Student Name": "Luwis", 
+            "Transaction ID": 1003012021130726372
+        }
+    ], 
+    "Upper Intermediate 1": [], 
+    "YL Starter": [], 
+    "YL2": [
+        {
+            "Amount": "MMK 45,000 ", 
+            "Class": "YL2", 
+            "Invoice ID": 202303001, 
+            "Note": "15,000 kyats \u1015\u103c\u1014\u103a\u101c\u103d\u103e\u1032\u1015\u1031\u1038\u101b\u1014\u103a(\u1005\u102c\u1021\u102f\u1015\u103a\u1016\u102d\u102f\u1038 \u1014\u103e\u1005\u103a\u1001\u102b\u101e\u103d\u1004\u103a\u1038)", 
+            "Student Name": "Nora 2", 
+            "Transaction ID": 1003010061118763896
+        }
+    ], 
+    "YL3": [], 
+    "YL5": [], 
+    "YL6": []
+}
