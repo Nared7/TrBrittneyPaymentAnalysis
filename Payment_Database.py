@@ -114,6 +114,9 @@ st.button('Fetch Invoice List', on_click=getInvoiceList)
 
 def searchName(name):
     global allStData, stData
+    inputStName = ''
+    inputTranID = 0
+    in_dbTran = ''
 
     db_studentName.clear()
     db_engClassPrice.clear()
@@ -134,43 +137,89 @@ def searchName(name):
     in_stName.clear()
     in_TranID.clear()
 
-    inputStName = name
+    if name.isdigit():
+        inputTranID = name
+        print('Input is Digit')
+        print(inputTranID)
+        print(type(inputTranID))
+        for database_className, database_students in invoice_data.items():
+            for database_singleStudent in database_students:
+                in_dbTran = str(database_singleStudent['Transaction ID'])
+                in_dbTran = in_dbTran[-len(inputTranID):]
+                print(in_dbTran)
+                if inputTranID == in_dbTran:
+                    # print(database_singleStudent['Student Name'])
+                    in_stName.append(database_singleStudent['Student Name'])
+                    in_id.append(database_singleStudent['Invoice ID'])
+                    in_TranID.append(database_singleStudent['Transaction ID'])
+                    in_amount.append(database_singleStudent['Amount'])
+                    in_class.append(database_className)
+                    in_note.append(database_singleStudent['Note'])
+                    inputStName = database_singleStudent['Student Name']
+        print(in_stName)
 
-    for database_className, database_students in allStData.items():
-        for database_singleStudent in database_students:
-            # print(database_singleStudent['Myanmar Name'])
-            if inputStName.lower() in database_singleStudent['Myanmar Name'].lower():
-                print(database_singleStudent['Myanmar Name'])
-                db_studentName.append(database_singleStudent['Myanmar Name'])
-                db_engClassPrice.append(database_singleStudent['4 Skill Class Fee (Monthly)'])
-                db_engClassDiscount.append(database_singleStudent['4Skill Discount (%)'])
-                db_engClassNetPrice.append(database_singleStudent['Net Fee (4 Skill)'])
+        for database_className, database_students in allStData.items():
+            for database_singleStudent in database_students:
+                # print(database_singleStudent['Myanmar Name'])
+                if inputStName.lower() in database_singleStudent['Myanmar Name'].lower():
+                    # print(database_singleStudent['Myanmar Name'])
+                    db_studentName.append(database_singleStudent['Myanmar Name'])
+                    db_engClassPrice.append(database_singleStudent['4 Skill Class Fee (Monthly)'])
+                    db_engClassDiscount.append(database_singleStudent['4Skill Discount (%)'])
+                    db_engClassNetPrice.append(database_singleStudent['Net Fee (4 Skill)'])
 
-                try:
-                    db_grammarClassPrice.append(database_singleStudent['Grammar Class Fee (Monthly)'])
-                    db_grammarClassDiscount.append(database_singleStudent['Grammar Discount (%)'])
-                    db_grammarClassNetPrice.append(database_singleStudent['Net Fee (Grammar)'])
-                except:
-                    db_grammarClassPrice.append('    -    ')
-                    db_grammarClassDiscount.append('    -    ')
-                    db_grammarClassNetPrice.append('    -    ')
+                    try:
+                        db_grammarClassPrice.append(database_singleStudent['Grammar Class Fee (Monthly)'])
+                        db_grammarClassDiscount.append(database_singleStudent['Grammar Discount (%)'])
+                        db_grammarClassNetPrice.append(database_singleStudent['Net Fee (Grammar)'])
+                    except:
+                        db_grammarClassPrice.append('    -    ')
+                        db_grammarClassDiscount.append('    -    ')
+                        db_grammarClassNetPrice.append('    -    ')
 
-                db_bookPrice.append(database_singleStudent['Book Fee (One School Year)'])
-                db_totalCost.append(database_singleStudent['Total Cost'])
-                db_totalCost_withoutBookFee.append(database_singleStudent['Total Cost (Without Book Fee)'])
-                db_studentClass.append(database_className)
+                    db_bookPrice.append(database_singleStudent['Book Fee (One School Year)'])
+                    db_totalCost.append(database_singleStudent['Total Cost'])
+                    db_totalCost_withoutBookFee.append(database_singleStudent['Total Cost (Without Book Fee)'])
+                    db_studentClass.append(database_className)
 
-    for database_className, database_students in invoice_data.items():
-        for database_singleStudent in database_students:
-            # print(database_singleStudent['Myanmar Name'])
-            if inputStName.lower() in database_singleStudent['Student Name'].lower():
-                # print(database_singleStudent['Student Name'])
-                in_stName.append(database_singleStudent['Student Name'])
-                in_id.append(database_singleStudent['Invoice ID'])
-                in_TranID.append(database_singleStudent['Transaction ID'])
-                in_amount.append(database_singleStudent['Amount'])
-                in_class.append(database_className)
-                in_note.append(database_singleStudent['Note'])
+    else:
+        inputStName = name
+
+        for database_className, database_students in allStData.items():
+            for database_singleStudent in database_students:
+                # print(database_singleStudent['Myanmar Name'])
+                if inputStName.lower() in database_singleStudent['Myanmar Name'].lower():
+                    # print(database_singleStudent['Myanmar Name'])
+                    db_studentName.append(database_singleStudent['Myanmar Name'])
+                    db_engClassPrice.append(database_singleStudent['4 Skill Class Fee (Monthly)'])
+                    db_engClassDiscount.append(database_singleStudent['4Skill Discount (%)'])
+                    db_engClassNetPrice.append(database_singleStudent['Net Fee (4 Skill)'])
+
+                    try:
+                        db_grammarClassPrice.append(database_singleStudent['Grammar Class Fee (Monthly)'])
+                        db_grammarClassDiscount.append(database_singleStudent['Grammar Discount (%)'])
+                        db_grammarClassNetPrice.append(database_singleStudent['Net Fee (Grammar)'])
+                    except:
+                        db_grammarClassPrice.append('    -    ')
+                        db_grammarClassDiscount.append('    -    ')
+                        db_grammarClassNetPrice.append('    -    ')
+
+                    db_bookPrice.append(database_singleStudent['Book Fee (One School Year)'])
+                    db_totalCost.append(database_singleStudent['Total Cost'])
+                    db_totalCost_withoutBookFee.append(database_singleStudent['Total Cost (Without Book Fee)'])
+                    db_studentClass.append(database_className)
+
+        for database_className, database_students in invoice_data.items():
+            for database_singleStudent in database_students:
+                # print(database_singleStudent['Myanmar Name'])
+                if inputStName.lower() in database_singleStudent['Student Name'].lower():
+                    # print(database_singleStudent['Student Name'])
+                    in_stName.append(database_singleStudent['Student Name'])
+                    in_id.append(database_singleStudent['Invoice ID'])
+                    in_TranID.append(database_singleStudent['Transaction ID'])
+                    in_amount.append(database_singleStudent['Amount'])
+                    in_class.append(database_className)
+                    in_note.append(database_singleStudent['Note'])
 
     for i in range(len(db_studentName)):
         stData.append(
